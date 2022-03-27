@@ -3,18 +3,17 @@ function nameMenuItem(food) {
 }
 
 function createMenuItem(name, price, type) {
-  var menuItem = {
+  return {
     name: name,
     price: price,
     type: type,
   }
-
-  return menuItem;
 }
 
-function addIngredients(food, ingredients) {
-  if (!ingredients.includes(food)) {
-    ingredients.push(food)
+function addIngredients(ingredient, ingredientArray) {
+// includes ingredient is not true. that's why you used bang ;)
+  if (!ingredientArray.includes(ingredient)) {
+    ingredientArray.push(ingredient)
   }
 }
 
@@ -27,13 +26,11 @@ function decreasePrice(price) {
 }
 
 function createRecipe(title, ingredients, type) {
-  var recipe = {
+  return {
     title: title,
     ingredients: ingredients,
     type: type
   }
-
-  return recipe;
 }
 
 module.exports = {

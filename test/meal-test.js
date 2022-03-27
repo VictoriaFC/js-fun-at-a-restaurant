@@ -57,8 +57,8 @@ describe("meal.js", function() {
 
       addIngredients("cheese", ingredients);
 
-      assert.equal(ingredients.length, 1);
-      assert.deepEqual(ingredients, ["cheese"]);
+      assert.equal(ingredients.length, 1); // ingredients.length == 1 == 1
+      assert.deepEqual(ingredients, ["cheese"]); // ingredients === ["cheese"]
     });
 
     it("should be able to add ingredients to an array that already contains ingredients", function() {
@@ -93,6 +93,11 @@ describe("meal.js", function() {
       var menuItemName = nameMenuItem("French Toast");
       var menuItem = createMenuItem(menuItemName, 10.99, "breakfast");
       var initialPrice = menuItem.price;
+      // var result = {
+      //   name: "Delicious French Toast",
+      //   price: 10.99,
+      //   type: "breakfast"
+      // }
 
       var formattedPrice = formatPrice(initialPrice);
       assert.equal(formattedPrice, "$10.99")
